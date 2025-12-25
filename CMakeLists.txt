@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.24)
 
 include(cmake/BootstrapVcpkg.cmake)
-find_package(nyu-cmake CONFIG REQUIRED)
-add_library(lab4 INTERFACE)
-add_subdirectory(rtl)
+nyu_add_sv(lab4
+  Exercise1.sv Exercise2.sv Exercise3.sv Exercise4.sv
+  Mysteries/Mystery1.sv Mysteries/Mystery2.sv
+)
 
 project(week-four-lab VERSION 1.0.0)
